@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Section</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="mainContainer">
+    <h1>Welcome to the Game Section</h1>
+    <div class="icm">
+      <img src="./images/tic_tac_toe.png" alt="Tic Tac Toe">
+      <img src="./images/stone_paper_scissor.jpg" alt="Stone Paper Scissor">
+    </div>
+    <div class="button-container">
+      <button onclick="loadGame('tic_tac_toe.html')">Play Tic-Tac-Toe</button>
+      <button onclick="loadGame('stone_paper_scissor.html')">Play Stone-Paper-Scissor</button>
+    </div>
+  </div>
+  <iframe class="iframe-container" id="gameFrame" src="" frameborder="0"></iframe>
+
+  <script>
+    function loadGame(gameUrl) {
+      document.getElementById('mainContainer').style.display = 'none';
+      const iframe = document.getElementById('gameFrame');
+      iframe.style.display = 'block';
+      iframe.src = gameUrl;
+    }
+  </script>
+</body>
+</html>
